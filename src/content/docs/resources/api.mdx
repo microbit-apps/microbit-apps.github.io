@@ -1,0 +1,56 @@
+---
+title: API Reference
+description: Complete API reference for all micro:bit apps
+---
+
+## Display Shield API
+
+### Display Class
+
+#### Methods
+
+- `draw_pixel(x, y, value)` - Set or clear a pixel
+- `draw_rect(x, y, width, height, value)` - Draw a rectangle
+- `draw_circle(x, y, radius, value)` - Draw a circle
+- `show_string(text, x, y)` - Display text on the screen
+- `clear()` - Clear the display
+- `show()` - Update the display with changes
+
+## MicroCode API
+
+### Core Functions
+
+- `forever()` - Repeat code continuously
+- `on_button_pressed()` - Handle button events
+- `pause()` - Delay execution
+- `set_var()` / `change_var()` - Work with variables
+
+### Sensor Access
+
+- `temperature()` - Read temperature
+- `compass_heading()` - Get compass direction
+- `acceleration()` - Read accelerometer
+- `button_is_pressed()` - Check button state
+
+## Microbit Robot API
+
+### Robot Class
+
+- `move_forward()` / `move_backward()` - Basic movement
+- `turn_left()` / `turn_right()` - Turning
+- `stop()` - Stop all motors
+- `set_speed(speed)` - Control motor speed
+- `read_sensor(sensor_type)` - Read sensor values
+
+### Sensor Methods
+
+- `read_distance()` - Ultrasonic distance sensor
+- `read_line_sensor()` - Line detection sensors
+- `read_light_sensor()` - Light level sensor
+
+---
+
+For more detailed API documentation, visit the individual app repositories:
+- [Display Shield](https://github.com/microbit-apps/display-shield/wiki/API)
+- [MicroCode](https://github.com/microbit-apps/microcode/wiki/API)
+- [Microbit Robot](https://github.com/microbit-apps/microbit-robot/wiki/API)
