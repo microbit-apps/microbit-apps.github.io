@@ -37,13 +37,13 @@ export default defineConfig({
           label: "Getting Started",
           items: [
             { label: "What is the BBC Micro:bit?", link: "/getting-started/intro/" },
-            { label: "Explore micro:bit apps", link: "/getting-started/setup/" },
             { label: "Display shield overview", link: "/getting-started/display-shields/" },
           ],
         },
         {
           label: "Applications",
           items: [
+            { label: "Explore micro:bit apps", link: "/apps/explore/" },
             { label: "MicroCode", link: "/apps/microcode/" },
             { label: "MicroData", link: "/apps/microdata/" },
           ],
@@ -51,7 +51,7 @@ export default defineConfig({
         {
           label: "Extensions",
           items: [
-            { label: "Display Shield Extension", link: "/extensions/display-shield/" },
+            { label: "Display Shield Extension", link: "/extensions/display-shield-ext/" },
           ],
         },
         {
