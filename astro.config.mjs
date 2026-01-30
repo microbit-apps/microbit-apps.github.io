@@ -3,6 +3,7 @@ import starlight from "@astrojs/starlight";
 
 export default defineConfig({
   site: "https://microbit-apps.github.io",
+  base: "/",
   integrations: [
     starlight({
       title: "Micro:bit Apps",
