@@ -35,8 +35,9 @@ export default defineConfig({
         {
           label: "Getting Started",
           items: [
-            { label: "What is Micro:bit?", link: "/getting-started/intro/" },
-            { label: "Set Up Your Device", link: "/getting-started/setup/" },
+            { label: "What is the BBC Micro:bit?", link: "/getting-started/intro/" },
+            { label: "Explore micro:bit apps", link: "/getting-started/setup/" },
+            { label: "Display shield overview", link: "/getting-started/display-shields/" },
           ],
         },
         {
