@@ -10,8 +10,17 @@ Micro:bit apps run on the [BBC micro:bit](/getting-started/intro/) and make use 
 
 ## Featured apps
 
-- [MicroCode](/apps/microcode/) - a visual programming environment for beginners
-- [MicroData](/apps/microdata/) - Collect and visualize sensor data from your micro:bit
+<CardGrid>
+  <Card title="MicroCode" link="/apps/microcode/">
+    a visual programming environment for beginners 
+    [![microcode](../../assets/microcode-splash.png)](./apps/microcode/)
+  </Card>
+  <Card title="MicroData" link="/apps/microdata/">
+    collect and visualize sensor data from your micro:bit 
+    [![microdata](../../assets/microdata-splash.png)](./apps/microdata/)
+  </Card>
+</CardGrid>
+
 
 ## MakeCode extensions
 
@@ -21,3 +30,5 @@ Micro:bit apps run on the [BBC micro:bit](/getting-started/intro/) and make use 
 
 Join our community and contribute to the growing ecosystem of micro:bit applications. 
 Visit our [github project](https://github.com/microbit-apps) to learn more and get involved!
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';

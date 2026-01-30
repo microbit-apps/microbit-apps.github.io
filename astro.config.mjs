@@ -54,14 +54,14 @@ export default defineConfig({
             { label: "Display Shield Extension", link: "/extensions/display-shield-ext/" },
           ],
         },
-        {
-          label: "Resources",
-          items: [
-            { label: "Documentation", link: "/resources/docs/" },
-            { label: "Tutorials", link: "/resources/tutorials/" },
-            { label: "API Reference", link: "/resources/api/" },
-          ],
-        },
+        // {
+        //   label: "Resources",
+        //   items: [
+        //     { label: "Documentation", link: "/resources/docs/" },
+        //     { label: "Tutorials", link: "/resources/tutorials/" },
+        //     { label: "API Reference", link: "/resources/api/" },
+        //   ],
+        // },
       ],
       customCss: ["./src/styles/custom.css"],
     }),
