@@ -37,7 +37,7 @@ export default defineConfig({
           label: "Getting Started",
           items: [
             { label: "What is the BBC Micro:bit?", link: "/getting-started/intro/" },
-            { label: "Display shield overview", link: "/getting-started/display-shields/" },
+            { label: "Display shields", link: "/getting-started/display-shields/" },
           ],
         },
         {
