@@ -45,6 +45,7 @@ export default defineConfig({
           items: [
             { label: "MicroCode", link: "/apps/microcode/" },
             { label: "MicroData", link: "/apps/microdata/" },
+            { label: "Display shield UI", link: "/apps/display-shield-ui"}
           ],
         },
         {
