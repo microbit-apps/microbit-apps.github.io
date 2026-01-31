@@ -41,11 +41,17 @@ export default defineConfig({
           ],
         },
         {
-          label: "Applications",
+          label: "MicroCode",
           items: [
-            { label: "MicroCode", link: "/apps/microcode/" },
-            { label: "MicroData", link: "/apps/microdata/" },
-            { label: "Display shield UI", link: "/apps/display-shield-ui"}
+            { label: "Start", link: "/microcode/start/" },
+            { label: "Guide", link: "/microcode/guide/" },
+          ],
+        },
+        {
+          label: "MicroData",
+          items: [
+            { label: "Start", link: "/microdata/start/" },
+            { label: "Guide", link: "/microdata/guide/" },
           ],
         },
         {
@@ -57,6 +63,7 @@ export default defineConfig({
         {
           label: "Resources",
           items: [
+            { label: "Display shield UI", link: "/resources/display-shield-ui"},
             { label: "Troubleshooting", link: "/resources/troubleshooting/" },
             { label: "FAQ", link: "/resources/faq/" },
           ],
