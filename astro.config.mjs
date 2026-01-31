@@ -43,7 +43,6 @@ export default defineConfig({
         {
           label: "Applications",
           items: [
-            { label: "Explore micro:bit apps", link: "/apps/explore/" },
             { label: "MicroCode", link: "/apps/microcode/" },
             { label: "MicroData", link: "/apps/microdata/" },
           ],
@@ -54,14 +53,13 @@ export default defineConfig({
             { label: "Display Shield Extension", link: "/extensions/display-shield-ext/" },
           ],
         },
-        // {
-        //   label: "Resources",
-        //   items: [
-        //     { label: "Documentation", link: "/resources/docs/" },
-        //     { label: "Tutorials", link: "/resources/tutorials/" },
-        //     { label: "API Reference", link: "/resources/api/" },
-        //   ],
-        // },
+        {
+          label: "Resources",
+          items: [
+            { label: "Troubleshooting", link: "/resources/troubleshooting/" },
+            { label: "FAQ", link: "/resources/faq/" },
+          ],
+        },
       ],
       customCss: ["./src/styles/custom.css"],
     }),
