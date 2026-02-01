@@ -2,3 +2,68 @@
 title: MicroCode Guide
 description: The MicroCode UI and languages
 ---
+
+<CardGrid>
+  <Card title="MicroCode home page">
+    ![microcode](../../../assets/microcode-splash.png)
+  </Card>
+  <Card title="Emotion badge program">
+    ![microcode](../../../assets/microcode-editor.png)
+  </Card>
+</CardGrid>
+
+## The emotion badge program
+
+The MicroCode home page (above, left) has three selectable tiles
+for editing the current program, selecting from a sample of programs
+(including the empty program), and recovering a program previously
+saved in one of three slots. 
+
+Selecting the edit tile with the A button on the display-shield
+the very first time will open the sample `emotion badge` program
+in the MicroCode editor (above, right). 
+
+As both the display shield and micro:bits have A and B buttons, 
+we will use `d-A` and `d-B` to refer to the shield's buttons
+and `m-A` and `m-B` to refer to the micro:bit's buttons. Note
+that the micro:bit buttons have triangular labels next to them.
+
+### Reading the program
+
+The program consists of four **When-Do** rules:
+
+- the **When** section is the left side of the rule and describes an event.
+- the **Do** section is the right side of the rule and describes an action to perform. 
+
+The first two rules fire on the press of the m-A button.
+The second two rules fire on the press of the m-B button.
+The first and third rules display animations of happy and sad faces.
+The second and fourth rules play happy and sad sounds.
+
+### Running the program
+
+You can run the program in one of three ways:
+
+- use the direction pad to navigate to the green play tile and press `d-A`
+- press either the `m-A` or `m-B` button on the micro:bit
+- press the `menu` button on the display shield
+
+The micro:bit will indicate the program is running by a quick circular
+animation on the LED display.
+
+### Stopping the program
+
+The program will continue to run until
+
+- you move to and select the stop tile (to the right of the play tile), or
+- you edit the program
+
+### Running without the display shield
+
+If you remove the micro:bit from the shield and power it via battery or
+USB, the last program you edited in MicroCode will begin to run.
+
+## Creating your first program
+
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
