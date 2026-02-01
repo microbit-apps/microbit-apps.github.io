@@ -43,15 +43,15 @@ export default defineConfig({
         {
           label: "MicroCode",
           items: [
-            { label: "Start", link: "/microcode/start/" },
-            { label: "Guide", link: "/microcode/guide/" },
+            { label: "MicroCode Start", link: "/microcode/start/" },
+            { label: "MicroCode Guide", link: "/microcode/guide/" },
           ],
         },
         {
           label: "MicroData",
           items: [
-            { label: "Start", link: "/microdata/start/" },
-            { label: "Guide", link: "/microdata/guide/" },
+            { label: "MicroData Start", link: "/microdata/start/" },
+            { label: "MicroData Guide", link: "/microdata/guide/" },
           ],
         },
         {
