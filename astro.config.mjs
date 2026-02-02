@@ -44,14 +44,15 @@ export default defineConfig({
           label: "MicroCode",
           items: [
             { label: "MicroCode Start", link: "/microcode/start/" },
-            { label: "MicroCode Guide", link: "/microcode/guide/" },
+            { label: "Emotion badge program", link: "/microcode/emotion-badge/" },
+            { label: "Create a new program", link: "/microcode/create/" }
           ],
         },
         {
           label: "MicroData",
           items: [
             { label: "MicroData Start", link: "/microdata/start/" },
-            { label: "MicroData Guide", link: "/microdata/guide/" },
+              { label: "MicroData Guide", link: "/microdata/guide/" },
           ],
         },
         {

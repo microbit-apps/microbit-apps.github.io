@@ -1,12 +1,9 @@
 ---
-title: MicroCode Guide
-description: The MicroCode UI and languages
+title: The emotion badge program
+description: Work with a built-in sample program
 ---
 
 <CardGrid>
-  <Card title="MicroCode home page">
-    ![microcode](../../../assets/microcode-splash.png)
-  </Card>
   <Card title="Emotion badge program">
     ![microcode](../../../assets/microcode-editor.png)
   </Card>
@@ -14,32 +11,19 @@ description: The MicroCode UI and languages
 
 ## The emotion badge program
 
-The MicroCode home page (above, left) has three selectable tiles
-for editing the current program, selecting from a sample of programs
-(including the empty program), and recovering a program previously
-saved in one of three slots. 
+The emotion badge program consists of four **When-Do** rules:
 
-Selecting the edit tile with the A button on the display-shield
-the very first time will open the sample `emotion badge` program
-in the MicroCode editor (above, right). 
-
-As both the display shield and micro:bits have A and B buttons, 
-we will use `d-A` and `d-B` to refer to the shield's buttons
-and `m-A` and `m-B` to refer to the micro:bit's buttons. Note
-that the micro:bit buttons have triangular labels next to them:.
-
-
-### Reading the program
-
-The program consists of four **When-Do** rules:
-
-- the **When** section is the left side of the rule and describes an event.
-- the **Do** section is the right side of the rule and describes an action to perform. 
+- the **When** section is the left side of the rule and describes an event, such 
+  as the pressing of a button.
+- the **Do** section is the right side of the rule and describes an action to perform,
+  such as displaying a 5x5 LED image on the micro:bit.
 
 The first two rules fire on the press of the m-A button.
 The second two rules fire on the press of the m-B button.
 The first and third rules display animations of happy and sad faces.
 The second and fourth rules play happy and sad sounds.
+
+The first rule reads as: ``When there is press of the m-A button, show two LED images''.
 
 ### Running the program
 
@@ -64,7 +48,7 @@ The program will continue to run until
 If you remove the micro:bit from the shield and power it via battery or
 USB, the last program you edited in MicroCode will begin to run.
 
-### Editing the emotion badge program
+### Changing the program
 
 Plugging the micro:bit back into the shield, you can continue to edit
 the program (it is saved automatically after each edit operation):
@@ -85,9 +69,5 @@ Let's do one more edit:
 - edit the image as before and press the d-B button
 
 You have added a new image to the animation sequence.
-
-
-## Creating your first program
-
 
 import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
