@@ -45,7 +45,9 @@ export default defineConfig({
           items: [
             { label: "MicroCode Start", link: "/microcode/start/" },
             { label: "Emotion badge program", link: "/microcode/emotion-badge/" },
-            { label: "Create a new program", link: "/microcode/create/" }
+            { label: "Create a new program", link: "/microcode/create/" },
+            { label: "When an event occurs...", link: "/microcode/when/"},
+            { label: "Do an action...", link: "/microcode/do/"}
           ],
         },
         {
