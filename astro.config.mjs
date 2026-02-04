@@ -15,7 +15,7 @@ export default defineConfig({
       social: [
         {
           label: "GitHub",
-          href: "https://github.com/microbit-apps/microbit-apps",
+          href: "https://github.com/microbit-apps",
           icon: "github",
         },
       ],
