@@ -1,8 +1,19 @@
 /* Custom Starlight Theme Overrides */
 
+
 /* Primary brand color */
-:root {
-  --sl-color-accent-rgb: 14, 165, 233; /* Sky blue - micro:bit inspired */
+:root,
+::backdrop {
+    --sl-color-accent-low: #B5121B;
+    --sl-color-accent: #B5121B;
+    --sl-color-accent-high : #B5121B;
+}
+
+:root[data-theme='light'],
+[data-theme='light'] ::backdrop {
+    --sl-color-accent-low: #B5121B;
+    --sl-color-accent: #B5121B;
+    --sl-color-accent-high : #B5121B;
 }
 
 /* Hero section styling */
