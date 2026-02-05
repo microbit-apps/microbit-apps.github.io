@@ -54,7 +54,9 @@ export default defineConfig({
           label: "MicroData",
           items: [
             { label: "MicroData start", link: "/microdata/start/" },
-              { label: "MicroData guide", link: "/microdata/guide/" },
+            { label: "MicroData guide", link: "/microdata/guide/" },
+            { label: "Electro-magnets", link: "/microdata/electromagnet/"}
+
           ],
         },
         {
