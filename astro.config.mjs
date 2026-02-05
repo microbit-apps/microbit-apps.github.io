@@ -43,8 +43,8 @@ export default defineConfig({
         {
           label: "MicroCode",
           items: [
-            { label: "MicroCode Start", link: "/microcode/start/" },
-            { label: "Emotion badge program", link: "/microcode/emotion-badge/" },
+            { label: "MicroCode start", link: "/microcode/start/" },
+            { label: "The emotion badge program", link: "/microcode/emotion-badge/" },
             { label: "Create a new program", link: "/microcode/create/" },
             { label: "When an event occurs...", link: "/microcode/when/"},
             { label: "Do an action...", link: "/microcode/do/"}
@@ -53,14 +53,14 @@ export default defineConfig({
         {
           label: "MicroData",
           items: [
-            { label: "MicroData Start", link: "/microdata/start/" },
-              { label: "MicroData Guide", link: "/microdata/guide/" },
+            { label: "MicroData start", link: "/microdata/start/" },
+              { label: "MicroData guide", link: "/microdata/guide/" },
           ],
         },
         {
           label: "Extensions",
           items: [
-            { label: "Display Shield Extension", link: "/extensions/display-shield-ext/" },
+            { label: "Display shield extension", link: "/extensions/display-shield-ext/" },
           ],
         },
         {
