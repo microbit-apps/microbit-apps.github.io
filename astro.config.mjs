@@ -6,7 +6,7 @@ export default defineConfig({
   base: "/",
   integrations: [
     starlight({
-      title: "Micro:bit Apps",
+      title: "micro:bit apps",
       description: "A collection of engaging applications and tutorials for the BBC micro:bit",
       logo: {
         light: "./src/assets/microbit-logo.svg",
@@ -36,7 +36,7 @@ export default defineConfig({
         {
           label: "Getting Started",
           items: [
-            { label: "What is the BBC Micro:bit?", link: "/getting-started/intro/" },
+            { label: "What is the BBC micro:bit?", link: "/getting-started/intro/" },
             { label: "Display shields", link: "/getting-started/display-shields/" },
           ],
         },
