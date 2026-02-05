@@ -9,8 +9,8 @@ export default defineConfig({
       title: "micro:bit apps",
       description: "A collection of engaging applications and tutorials for the BBC micro:bit",
       logo: {
-        light: "./src/assets/microbit-logo.svg",
-        dark: "./src/assets/microbit-logo-dark.svg",
+        light: "./src/assets/lu-logo-light.png",
+        dark: "./src/assets/lu-logo-dark.png",
       },
       social: [
         {
