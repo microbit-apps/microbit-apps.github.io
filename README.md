@@ -8,8 +8,12 @@ MicroData, which are described more fully in the sibling directories
 
 # TODO
 
-- user interface and input mechanisms
-  - in web app
-  - on hardware
+More sections for the site
 
-  
+- Community
+- Jacdac
+- Robot
+
+MicroData
+- bring over content from https://github.com/microbit-apps/MicroData/blob/main/EXPERIMENTS.MD
+
