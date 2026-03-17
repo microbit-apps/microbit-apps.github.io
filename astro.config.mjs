@@ -75,4 +75,8 @@ export default defineConfig({
       customCss: ["./src/styles/custom.css"],
     }),
   ],
+  redirects: {
+    '/microcode': '/microcode/start',
+    '/microdata': '/microdata/start',
+  },
 });
