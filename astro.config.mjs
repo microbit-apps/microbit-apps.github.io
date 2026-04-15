@@ -46,15 +46,25 @@ export default defineConfig({
             { label: "MicroCode start", link: "/microcode/start/" },
             { label: "The emotion badge program", link: "/microcode/emotion-badge/" },
             { label: "Create a new program", link: "/microcode/create/" },
-            { label: "When an event occurs...", link: "/microcode/when/"},
-            { label: "Do an action...", link: "/microcode/do/"}
+            { label: "When an event occurs...", link: "/microcode/when/" },
+            { label: "Do an action...", link: "/microcode/do/" }
           ],
         },
         {
           label: "MicroData",
           items: [
             { label: "MicroData start", link: "/microdata/start/" },
-              { label: "MicroData guide", link: "/microdata/guide/" },
+            { label: "MicroData guide", link: "/microdata/guide/" },
+
+            {
+              label: "Experiments",
+              items: [
+                { label: "Magnetometer location", link: "/microdata/magnetometer_location/" },
+                { label: "Magnetic field strength and distance", link: "/microdata/magnetism_and_distance/" },
+                { label: "Light and filtering", link: "/microdata/light/" },
+                { label: "Micro:bit drop", link: "/microdata/microbit-drop" },
+              ]
+            }
           ],
         },
         {
@@ -66,7 +76,7 @@ export default defineConfig({
         {
           label: "Resources",
           items: [
-            { label: "Display shield UI", link: "/resources/display-shield-ui"},
+            { label: "Display shield UI", link: "/resources/display-shield-ui" },
             { label: "Troubleshooting", link: "/resources/troubleshooting/" },
             { label: "FAQ", link: "/resources/faq/" },
           ],
