@@ -1,0 +1,171 @@
+---
+title: Using C++ and Static TypeScript
+description: STS and C++ can be used together, providing flexibility and performance when needed it.
+---
+
+Most parts of a micro:bit app are written in STS, but sometimes you might want C++ for lower-level access to the micro:bit.
+STS is compiled to machine code and can interface with C++ using [shims](https://makecode.com/simshim). These allow us to
+expose arbitrary C++ code in STS. 
+
+shims are defined in shims.d.ts, and shared types are defined in enums.d.ts.
+
+If you plan on using C++ we recommend that you read the in-depth section of [The architecture of a micro:bit app](/example/app-architecture). Futhermore, 
+whilst it is possible to compile C++ code with the makecode-cli compiler, it will be very slow because it is designed for pure STS development.
+The setup for compiling C++ code is detailed below
+
+## Local C++ compilation setup
+
+This section details how to setup pxt for native C++ compilation. This enables faster and more flexible compilation,
+as well as the ability to compile with modified CODAL and PXT repos.
+
+We presume that you already have node setup, from the previous page on [MakeCode and VSCode project setup](/example/setup).
+This guide is from [github/pxt-microbit](https://github.com/microsoft/pxt-microbit).
+
+1. Clone and install packages:
+
+```
+git clone https://github.com/microsoft/pxt-microbit
+cd pxt-microbit
+
+npm install -g pxt
+npm install
+```
+
+2. Export compiler options to build locally, generate ASM and ELF files:
+
+```
+export PXT_FORCE_LOCAL=1 PXT_RUNTIME_DEV=1 PXT_ASMDEBUG=1 PXT_NODOCKER=1 PXT_COMPILE_SWITCHES=rawELF
+```
+
+3. Build pxt-microbit locally, this is only necessary the first time:
+
+```
+pxt buildtarget --local --clean
+```
+
+4. Add your micro:bit app into /libs:
+
+```
+cd libs/
+https://github.com/microbit-apps/example
+```
+
+5. Make your apps dependencies local:
+by default pxt.json dependencies point to a remote repo. If you want them to use your local pxt-microbit/libs
+you need to modify pxt.json to get them to point locally.
+
+Ensure that the prefix is exactly ```file:../``` because ```file: ../``` will not work:
+
+**pxt.json**:
+
+
+```
+  "dependencies": {
+    "core": "file:../core",
+    "radio": "file:../radio",
+    "microphone": "file:../microphone",
+    "datalogger": "file:../datalogger"
+  },
+```
+
+6. Compile your app locally:
+
+```
+pxt build --local --clean
+```
+
+### Local development with CODAL
+If you want to also locally compile with CODAL then you can modify [pxt-microbit/pxtarget.json](https://github.com/microsoft/pxt-microbit/blob/f2af73bde9811c3a113fde4b5fce3125557e4bfe/pxtarget.json#L202)
+to point to your codal-microbit-v2 fork.
+
+After running ```pxt buildtarget --local --clean``` pxt will pull your codal-microbit-v2.
+
+TODO: improve:
+If you run into CODAL, and you are only concerned with microbit-v2 (mbcodal) development consider disabling mbdal:
+
+**pxtarget.json**:
+
+Change the url and/or branch to use a different codal-microbit-v2:
+```
+
+      "compileService": {
+        "buildEngine": "codal",
+        "codalTarget": {
+          "name": "codal-microbit-v2",
+          "url": "https://github.com/kierpalin/codal-microbit-v2",
+          "branch": "master",
+          "type": "git"
+        },
+```
+
+
+If you wish to disable certain target compilaion, such as microbit-v1 (mbdal) then you can remove it from multiVariants,
+and add it to disableVariants:
+```
+
+  "multiVariants": [
+    "mbcodal"
+  ],
+  "alwaysMultiVariant": true,
+  "disableVariants": [
+    "mbdal"
+  ],
+```
+
+
+More information regarding pxtarget.json is available [here](https://makecode.com/targets/pxtarget).
+
+## Shimming
+1. Include your C++, STS, shim and enum files in pxt.json:
+
+```
+    "main.ts",
+    "shims.d.ts",
+    "enums.d.ts",
+    "myCode.ts",
+    "myCode.cpp"
+```
+
+2. Annotate your functions to shim them:
+**myCode.ts**:
+
+```
+namespace example_app {
+  //% shim=__example_app::square
+  export function square(x: number): number {return 0;}
+}
+```
+
+**myCode.cpp**:
+
+```
+#include "pxt.h"
+namespace __example_app {
+  //%
+  float square(x: number): void {
+    return x * x;
+  }
+}
+```
+
+
+**main.ts**:
+
+```
+basic.number(example_app.square(5));
+```
+
+
+**Important** the namespace of your STS and C++ code cannot be the same, hence we use **example_app** and **__example_app** here.
+
+3. Compile your code, and run it on your micro:bit.
+
+```
+pxt build --local
+```
+
+Notice that even though the square function in **myCode.ts** returns 0, the actual number on the display is 25.
+This means the C++ function is being used, so you have setup shimming correctly.
+
+
+## 

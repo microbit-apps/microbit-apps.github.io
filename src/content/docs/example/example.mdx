@@ -1,0 +1,26 @@
+---
+title: Making a micro:bit app
+description: How to make your own micro:bit app
+---
+
+This section explains how you can program your own micro:bit app in MakeCode or VSCode.
+
+Below is an overview of some of the features of a micro:bit app. This is followed by a section detailing the development setup,
+then a walkthrough of a example app to get you started.
+
+## Development Overview
+- We support development in Visual Studio Code and the MakeCode editor
+- You an program in [Static TypeScript (STS)](https://makecode.com/language) and/or [C++](https://makecode.com/simshim)
+- VSCode and MakeCode have a built in simulator to test your app without needing a physical micro:bit device, supporting rapid development and testing
+- The Static TypeScript compiler setup is minimal
+- Sharing your work and using other extensions in your work is enabled by a simple JSON dependency management system in a single file called [pxt.json](https://makecode.com/extensions/pxt-json)
+- There are a number of extensions to support your development. Such sensor handling with [microbit-apps/sensors](https://github.com/microbit-apps/sensors) and [Jacdac](https://github.com/jacdac/jacdac). Or Graphical User Interface (GUI) development with [microbit-apps/MicroGUI](https://github.com/microbit-apps/microgui)
+- All code under [github.com/microbit-apps](https://github.com/microbit-apps/) is available under MIT license.
+
+## Getting Started
+ - [MakeCode and VSCode project setup](/example/setup)
+ - [Walkthrough of an example micro:bit app](/example/example-app)
+ - [Using MicroGUI for rapid iteration](/example/microgui)
+ - [Using C++ and STS](/example/using-cpp)
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';

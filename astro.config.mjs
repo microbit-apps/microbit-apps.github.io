@@ -74,6 +74,17 @@ export default defineConfig({
           ],
         },
         {
+          label: "Making a micro:bit app",
+          items: [
+            { label: "Overview", link: "/example/example/" },
+            { label: "Setup", link: "/example/setup/" },
+            { label: "Example app", link: "/example/example-app/" },
+            { label: "Using MicroGUI", link: "/example/microgui" },
+            { label: "Using C++", link: "/example/using-cpp" },
+          ],
+        },
+
+        {
           label: "Resources",
           items: [
             { label: "Display shield UI", link: "/resources/display-shield-ui" },
