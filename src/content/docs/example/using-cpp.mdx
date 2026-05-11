@@ -3,11 +3,12 @@ title: Using C++ and Static TypeScript
 description: STS and C++ can be used together, providing flexibility and performance when needed it.
 ---
 
-Most parts of a micro:bit app are written in STS, but sometimes you might want C++ for lower-level access to the micro:bit.
-STS is compiled to machine code and can interface with C++ using [shims](https://makecode.com/simshim). These allow us to
-expose arbitrary C++ code in STS. 
+Most parts of a micro:bit app are written in Static TypeScript (STS), but sometimes you might want C++ for lower-level access to the micro:bit.
+STS is compiled to machine code and can interface with C++ using [shims](https://makecode.com/simshim). A shim is an interface
+between C++ and STS, allowing you to expose arbitrary C++ code in STS.
+This is particularly valuable when performance is important.
 
-shims are defined in shims.d.ts, and shared types are defined in enums.d.ts.
+shims are defined in shims.d.ts, and shared custom datatypes are defined in enums.d.ts.
 
 If you plan on using C++ we recommend that you read the in-depth section of [The architecture of a micro:bit app](/example/app-architecture). Futhermore, 
 whilst it is possible to compile C++ code with the makecode-cli compiler, it will be very slow because it is designed for pure STS development.
@@ -166,6 +167,3 @@ pxt build --local
 
 Notice that even though the square function in **myCode.ts** returns 0, the actual number on the display is 25.
 This means the C++ function is being used, so you have setup shimming correctly.
-
-
-## 
