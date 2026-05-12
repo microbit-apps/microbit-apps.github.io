@@ -81,9 +81,6 @@ to point to your codal-microbit-v2 fork.
 
 After running ```pxt buildtarget --local --clean``` pxt will pull your codal-microbit-v2.
 
-TODO: improve:
-If you run into CODAL, and you are only concerned with microbit-v2 (mbcodal) development consider disabling mbdal:
-
 **pxtarget.json**:
 
 Change the url and/or branch to use a different codal-microbit-v2:
@@ -100,7 +97,7 @@ Change the url and/or branch to use a different codal-microbit-v2:
 ```
 
 
-If you wish to disable certain target compilaion, such as microbit-v1 (mbdal) then you can remove it from multiVariants,
+If you wish to disable compilation for certain targets, such as the microbit-v1 (mbdal) then you can remove it from multiVariants,
 and add it to disableVariants:
 ```
 
