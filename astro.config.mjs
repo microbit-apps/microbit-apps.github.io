@@ -38,6 +38,7 @@ export default defineConfig({
           items: [
             { label: "What is the BBC micro:bit?", link: "/getting-started/intro/" },
             { label: "Display shields", link: "/getting-started/display-shields/" },
+            { label: "Display shield programming in MakeCode", link: "/getting-started/display-shields-programming/" },
           ],
         },
         {
